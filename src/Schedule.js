@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Schedule.css';
 
 export default class Schedule extends Component {
 	formatSchedule(schedule) {
@@ -10,7 +11,7 @@ export default class Schedule extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="schedule">
 				{this.formatSchedule(this.props.schedule)}
 			</div>
 		)
