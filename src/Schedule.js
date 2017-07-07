@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 
 export default class Schedule extends Component {
-	render () {
+	formatSchedule(schedule) {
+		if(!isNaN(parseInt(schedule, 10))){
+			schedule += " min";
+		}
+		return schedule;
+	}
+
+	render() {
 		return (
 			<div>
-				{this.props.schedule} min
+				{this.formatSchedule(this.props.schedule)}
 			</div>
 		)
 	}

@@ -7,7 +7,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<Schedule schedule="10" />
+				<Schedule schedule="0" />
 				<Schedule schedule="20" />
 			</div>
 		);
