@@ -3,3 +3,7 @@
 	padding: 1em 1em 0;
 	font-size: 2em;
 }
+
+.schedule:last-of-type {
+	padding-bottom: 1em;
+}
