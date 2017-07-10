@@ -1,9 +1,15 @@
 .schedule {
 	text-align: center;
 	padding: 1em 1em 0;
+}
+
+.schedule:first-of-type {
 	font-size: 2em;
+	color: #f07a3a;
 }
 
 .schedule:last-of-type {
+	color: lightgrey;
+	font-size: 1.2em;
 	padding-bottom: 1em;
 }

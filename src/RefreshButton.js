@@ -9,7 +9,7 @@ export default class RefreshButton extends Component {
 
 	render() {
 		return(
-			<button className="RefreshButton" onClick={() => this.handleClick()}>Refresh</button>
+			<button className="refreshButton" onClick={() => this.handleClick()}>Refresh</button>
 		);
 	}
 } 
