@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Schedule from './Schedule';
 import Breadcrumb from './Breadcrumb';
 import RefreshButton from './RefreshButton';
+import SchedulesList from './SchedulesList';
 import './App.css';
 
 
@@ -68,17 +68,11 @@ class App extends Component {
 	}
 
 	render() {
-		var schedules = this.state.schedules;
-
 		return (
 			<div>
 				<Breadcrumb lineType={this.state.lineType} lineId={this.state.lineId} stationSlug={this.state.stationSlug} />
-				<div>
-					{schedules.map((schedule, index) => {
-						return <Schedule key={index} schedule={schedule.message} />
-					})}
-					<RefreshButton refresh={() => this.refreshSchedules()} />
-				</div>
+				<SchedulesList schedules={this.state.schedules} />
+				<RefreshButton refresh={() => this.refreshSchedules()} />
 			</div>
 		);
 	}

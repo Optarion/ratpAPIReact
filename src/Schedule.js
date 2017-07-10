@@ -4,9 +4,9 @@ import './Schedule.css';
 export default class Schedule extends Component {
 	render() {
 		return (
-			<div className="schedule">
+			<li className="schedule">
 				{this.props.schedule}
-			</div>
+			</li>
 		)
 	}
 }

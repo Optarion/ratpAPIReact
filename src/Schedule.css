@@ -1,6 +1,6 @@
 .schedule {
 	text-align: center;
-	padding: 1em 1em 0;
+	padding: 0 1em 1em;
 }
 
 .schedule:first-of-type {
@@ -11,5 +11,5 @@
 .schedule:last-of-type {
 	color: lightgrey;
 	font-size: 1.2em;
-	padding-bottom: 1em;
+	padding-bottom: 0;
 }
