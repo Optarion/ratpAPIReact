@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Schedule from './Schedule';
 import Breadcrumb from './Breadcrumb';
+import RefreshButton from './RefreshButton';
 import './App.css';
 
 
@@ -15,8 +16,11 @@ class App extends Component {
 		};
 	}
 
-
 	componentDidMount() {
+		this.setNewSchedules();
+	}
+
+	setNewSchedules() {
 		this.getNextSchedules()
 		.then(schedules => {
 			this.setState({
@@ -59,6 +63,10 @@ class App extends Component {
 		return nextSchedules;
 	}
 
+	refreshSchedules() {
+		this.setNewSchedules();
+	}
+
 	render() {
 		var schedules = this.state.schedules;
 
@@ -69,6 +77,7 @@ class App extends Component {
 					{schedules.map((schedule, index) => {
 						return <Schedule key={index} schedule={schedule.message} />
 					})}
+					<RefreshButton refresh={() => this.refreshSchedules()} />
 				</div>
 			</div>
 		);

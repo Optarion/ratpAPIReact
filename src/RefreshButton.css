@@ -1,0 +1,10 @@
+.RefreshButton {
+	display: block;
+	margin: 1em auto;
+	padding: .8em;
+	border: 0;
+	border-radius: .8em;
+	background: #f07a3a;
+	color: white;
+	font-size: 1.1em;
+}
